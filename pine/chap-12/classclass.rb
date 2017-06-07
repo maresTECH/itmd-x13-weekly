@@ -1,6 +1,0 @@
-puts(42.class)
-puts("I'll have mayo on mine!".class)
-puts(Time.new.class)
-puts(Time.class)
-puts(String.class)
-puts(Class.class)
