@@ -5,11 +5,11 @@
     <%= csrf_meta_tags %>
 
     <%= csrf_meta_tags %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
     <body class='<%= controller.controller_name%>'>
       <div id="banner">
         <%= image_tag 'logo.svg', alt: 'The Progmatic Bookshelf' %>
@@ -24,9 +24,9 @@
             <li><a href="http://www..../contact">Contact</a></li>
           </ul>
         </div>
-      <div id="main">>
-    <%= yield %>
-  </div>
-</div>
-</body>
+        <div id="main">>
+          <%= yield %>
+        </div>
+      </div>
+    </body>
 </html>
