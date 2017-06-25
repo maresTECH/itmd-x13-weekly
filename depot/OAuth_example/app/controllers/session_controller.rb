@@ -3,7 +3,6 @@ class SessionController < ApplicationController
 
 
   def create
-    puts auth_hash
   end
 
   def destroy
