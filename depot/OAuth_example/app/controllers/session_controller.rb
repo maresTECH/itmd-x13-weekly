@@ -3,6 +3,12 @@ class SessionController < ApplicationController
 
 
   def create
+    user = User.find_or_create_by(:provider => auth_hash[:provider], :uid => auth_hash[:uid]) do |user|
+      user.name = auth_hash[:info][:name]
+    end
+
+  session[:user_id] = user.id
+  redirect_to :store_index
   end
 
   def destroy
@@ -12,4 +18,5 @@ class SessionController < ApplicationController
   def auth_hash
     request.env["omniauth.auth"]
   end
+
 end
