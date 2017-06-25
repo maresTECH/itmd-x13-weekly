@@ -14,7 +14,8 @@ module Depot
     config.active_record.raise_in_transactional_callbacks = true
 
     config.middleware.use OmniAuth::Builder do
-      provider :developer
+      provider :developer if Rails.env.development?
+      provider :github, 'd8edb46d50a1d6c45520', '1910e69e572aa8d87faf49dbe5850d135bbe8edb'
     end
   end
 end
