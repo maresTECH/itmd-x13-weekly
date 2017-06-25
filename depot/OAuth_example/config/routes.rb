@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   get 'auth/developer', :as => 'developer_auth'
   match 'auth/:provider/callback' => 'session#create', :via => [:get, :post]
 
-  get 'session/destroy'
+  get 'session/destroy', :as => 'logout'
 
 end
